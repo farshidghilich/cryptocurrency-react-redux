@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom'
 import { coinAction } from '../Redux/action'
 import { LinearProgress, makeStyles, Typography } from "@material-ui/core";
 import { numberWithCommas } from "../components/Coins";
-import CoinInfo from '../components/CoinInfo';
+
 import ReactHtmlParser from 'react-html-parser'
 function CoinPage() {
     const { id } = useParams()
@@ -143,7 +143,7 @@ function CoinPage() {
 
             ) : error ? (<p>{error}</p>) : (<></>)}
 
-            <CoinInfo />
+
         </div>
     )
 }

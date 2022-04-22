@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
 const darkTheme = createTheme({
     palette: {
         primary: {
-            main: "#fff",
+            main: "#000",
         },
         type: "dark",
     },
@@ -49,7 +49,7 @@ function Header() {
                             variant="h6"
                             className={classes.title}
                         >
-                            Crypto Hunter
+                            Cryptocurrency
                         </Typography>
 
                         <Select

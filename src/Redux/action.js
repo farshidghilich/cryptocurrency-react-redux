@@ -41,17 +41,3 @@ export const coinAction = (id) => async (dispatch) => {
         })
     }
 }
-export const coinInfoAction = (id, days) => async (dispatch) => {
-    try {
-        dispatch({ type: "COIN_INFO_REQUEST" })
-        const { data } = await axios.get
-            (`https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=usd&days=${days}`)
-        dispatch({ type: "COIN_INFO_SECCESS", payload: data })
-    } catch (error) {
-        dispatch({
-            type: "COIN_INFO_FAILED", payload: error.response && error.response.data.message
-                ? error.response.data.message
-                : error.message,
-        })
-    }
-}

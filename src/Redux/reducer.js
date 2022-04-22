@@ -34,15 +34,3 @@ export const coinReducer = (state = { coin: {} }, action) => {
             return state;
     }
 }
-export const coinInfoReducer = (state = { coinInfo: {} }, action) => {
-    switch (action.type) {
-        case "COIN_INFO_REQUEST":
-            return { loading: true }
-        case "COIN_INFO_SECCESS":
-            return { loading: false, success: true, coinInfo: action.payload }
-        case "COIN_INFO_FAILED":
-            return { loading: false, success: false, error: action.payload }
-        default:
-            return state;
-    }
-}

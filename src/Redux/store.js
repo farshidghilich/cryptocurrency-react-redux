@@ -6,7 +6,7 @@ const reducers = combineReducers({
     coinList: allcoinsReducer,
     trendCoins: trendCoinsReducer,
     oneCoin: coinReducer,
-    coinInformaion: coinInfoReducer,
+
 })
 const initialStates = {
 
